@@ -7,11 +7,12 @@ The best drinking game world wide
 # What do I need to install?
 
 For running this Project, you'll need these installed:
-    - JavaScript
-    - [Node.js]{https://nodejs.org/en/}
-    - [React native]{https://reactnative.dev/docs/getting-started} (ideally version 17.0.2)
-    - [expo]{https://docs.expo.dev/get-started/installation/} 
-    - An IDE of your choise
+
+* JavaScript
+* [Node.js](https://nodejs.org/en/)
+* [React native](https://reactnative.dev/docs/getting-started) (ideally version 17.0.2)
+* [expo](https://docs.expo.dev/get-started/installation/) 
+* An IDE of your choise
 
 # How to run?
 
