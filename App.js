@@ -1,9 +1,15 @@
 import { StatusBar } from "expo-status-bar";
 import { LogBox, StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import { Button } from "react-native-web";
+import { useFonts, Montserrat_300Light, Montserrat_400Regular, Montserrat_600SemiBold} from "@expo-google-fonts/montserrat";
 
 export default function App() {
   const onPress = () => console.log("Casual mode has been clicked");
+  let [fontsLoaded] = useFonts({
+    Montserrat_300Light,
+    Montserrat_400Regular,
+    Montserrat_600SemiBold
+  })
 
   return (
     <View style={styles.background}>
@@ -33,12 +39,11 @@ const styles = StyleSheet.create({
     paddingRight: 16,
   },
   topperTitle: {
-    fontFamily: "Montserrat",
+    fontFamily: "Montserrat_300Light",
     fontSize: 24,
-    fontStyle: "normal",
   },
   realTitle: {
-    fontFamily: "Montserrat",
+    fontFamily: "Montserrat_600SemiBold",
     fontSize: 32,
     fontStyle: "normal",
   },
