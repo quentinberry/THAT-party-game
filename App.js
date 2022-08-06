@@ -1,7 +1,19 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
+import { useFonts, Montserrat_400Regular, Montserrat_600SemiBold} from "@expo-google-fonts/montserrat";
+import AppLoading from "expo-app-loading";
 
 export default function App() {
+
+  let [fontsLoaded] = useFonts({
+    Montserrat_400Regular,
+    Montserrat_600SemiBold,
+  });
+
+  if (!fontsLoaded){
+    return <AppLoading />;
+  }
+
   const onPress = () => console.log("Casual mode has been clicked");
   const onButtonPress = () => console.log("Select button ahs been pressed");
 
@@ -87,12 +99,12 @@ const styles = StyleSheet.create({
     paddingRight: 16,
   },
   topperTitle: {
-    fontFamily: "Montserrat",
+    fontFamily: "Montserrat_400Regular",
     fontSize: 24,
     fontStyle: "normal",
   },
   realTitle: {
-    fontFamily: "Montserrat",
+    fontFamily: "Montserrat_600SemiBold",
     fontSize: 32,
     fontStyle: "normal",
   },
@@ -120,7 +132,7 @@ const styles = StyleSheet.create({
     backgroundColor:"#8BB7F2",
   },
   modeText:{
-    fontFamily: "Montserrat",
+    fontFamily: "Montserrat_400Regular",
     fontStyle: "normal",
     fontSize: 24,
     paddingTop: 96,
@@ -128,7 +140,7 @@ const styles = StyleSheet.create({
     paddingRight:13,
   },
   modeTextPart:{
-    fontFamily: "Montserrat",
+    fontFamily: "Montserrat_600SemiBold",
     fontStyle: "normal",
     fontSize:24,
     paddingRight:13,
@@ -161,7 +173,6 @@ const styles = StyleSheet.create({
     backgroundColor:"#8BF2E6",
   },
   gameMenuBottom:{
-    marginTop: 298-32,
     flex: 1,
     flexDirection: "row",
     justifyContent: "space-between",
