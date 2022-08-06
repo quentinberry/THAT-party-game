@@ -13,6 +13,9 @@ export default function App() {
         <Text style={styles.realTitle}>THAT Party Game</Text>
       </View>
 
+      <View style={styles.allGamesWrapper}>
+
+
       <View style={styles.gameMenuTop}>
         <View style={styles.gameMenuBackground}>
 
@@ -68,6 +71,7 @@ export default function App() {
 
         </View>
       </View>
+      </View>
 
     </View>
   );
@@ -92,10 +96,13 @@ const styles = StyleSheet.create({
     fontSize: 32,
     fontStyle: "normal",
   },
-  gameMenuTop: {
+  allGamesWrapper:{
     marginLeft: 16,
     marginRight: 16,
     marginTop:45,
+  },
+  gameMenuTop: {
+    
     flex: 1,
     flexDirection: "row",
     justifyContent: "space-between",
@@ -119,13 +126,11 @@ const styles = StyleSheet.create({
     paddingTop: 96,
     paddingLeft: 13,
     paddingRight:13,
-    fontWeight:700,
   },
   modeTextPart:{
     fontFamily: "Montserrat",
     fontStyle: "normal",
     fontSize:24,
-    fontWeight:400,
     paddingRight:13,
     paddingLeft: 13,
   },
@@ -142,7 +147,6 @@ const styles = StyleSheet.create({
     fontStyle: "normal",
     fontSize:24,
     width:91,
-    fontWeight:400,
     color: '#fff',
     alignItems: "center",
     alignSelf: "center",
@@ -157,9 +161,7 @@ const styles = StyleSheet.create({
     backgroundColor:"#8BF2E6",
   },
   gameMenuBottom:{
-    marginLeft: 16,
-    marginRight: 16,
-    marginTop:16,
+    marginTop: 298-32,
     flex: 1,
     flexDirection: "row",
     justifyContent: "space-between",
