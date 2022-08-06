@@ -14,11 +14,12 @@ export default function App() {
         <Text style={styles.realTitle}>THAT Party Game</Text>
       </View>
 
-      <View style={styles.gameMenu}>
+      <View style={styles.gameMenuTop}>
         <View style={styles.casualModeBackground}>
 
           <TouchableOpacity style={styles.casualModeInfo} onPress={onPress}>
-            <Text style={styles.causalModeText}>Casual Mode</Text>
+            <Text style={styles.causalModeText}>Casual</Text>
+            <Text style={styles.textPartNamedMode}>Mode</Text>
           </TouchableOpacity>
 
           <TouchableOpacity style={styles.startButton} onPress={changeColor}>
@@ -30,6 +31,31 @@ export default function App() {
 
           <TouchableOpacity style={styles.fastModeInfo} onPress={onPress}>
             <Text style={styles.fastModeText}>Fast Mode</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity style={styles.startButton} onPress={changeColor}>
+            <Text style={styles.startButtonText}>Select</Text>
+          </TouchableOpacity>
+        </View>
+
+      </View>
+
+      <View style={styles.gameMenuBottom}>
+        <View style={styles.spicyModeBackground}>
+
+          <TouchableOpacity style={styles.spicyModeInfo} onPress={onPress}>
+            <Text style={styles.spicyModeText}>Spicy Mode</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity style={styles.startButton} onPress={changeColor}>
+            <Text style={styles.startButtonText}>Select</Text>
+          </TouchableOpacity>
+        </View>
+
+        <View style={styles.partnerModeBackground}>
+
+          <TouchableOpacity style={styles.partnerModeInfo} onPress={onPress}>
+            <Text style={styles.partnerModeText}>Partner Mode</Text>
           </TouchableOpacity>
 
           <TouchableOpacity style={styles.startButton} onPress={changeColor}>
@@ -53,16 +79,19 @@ const styles = StyleSheet.create({
     paddingRight: 16,
   },
   topperTitle: {
-    fontFamily: "Montserrat",
+    fontFamily: "SF Pro",
     fontSize: 24,
-    fontStyle: "normal",
+    fontStyle: "regular",
   },
   realTitle: {
-    fontFamily: "Montserrat",
+    fontFamily: "SF Pro",
     fontSize: 32,
-    fontStyle: "normal",
+    fontStyle: "bold",
   },
-  gameMenu: {
+
+  // game menu top
+
+  gameMenuTop: {
     marginLeft: 16,
     marginRight: 16,
     marginTop:45,
@@ -91,12 +120,14 @@ const styles = StyleSheet.create({
     paddingRight:13,
     paddingBottom: 24,
   },
+  textPartNamedMode:{
+fontFamily
+  },
   fastModeBackground:{
     backgroundColor: "#F4F7FB",
     borderRadius: 22,
     width:171,
     height:237,
-    marginRight: 16,
   },
   fastModeInfo:{
     width:171,
@@ -128,5 +159,58 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: "#fff",
     marginTop:3,
-  }
+  },
+
+  //bottom game menu
+
+  gameMenuBottom:{
+    paddingTop: 16,
+    marginLeft:16,
+    marginRight: 16,
+    flex: 1,
+    flexDirection: "row",
+    justifyContent: "space-between",
+  },
+  spicyModeBackground:{
+    backgroundColor: "#F4F7FB",
+    borderRadius: 22,
+    width:171,
+    height:237,
+  },
+  spicyModeInfo:{
+    width:171,
+    height:171,
+    borderRadius:22,
+    backgroundColor:"#E4F28B"
+  },
+  spicyModeText:{
+    fontFamily: "Montserrat",
+    fontStyle: "normal",
+    fontSize: 24,
+    paddingTop: 96,
+    paddingLeft: 13,
+    paddingRight:13,
+    paddingBottom: 24,
+  },
+  partnerModeBackground:{
+    backgroundColor: "#F4F7FB",
+    borderRadius: 22,
+    width:171,
+    height:237,
+  },
+  partnerModeInfo:{
+    width:171,
+    height:171,
+    borderRadius:22,
+    backgroundColor:"#F28B8B"
+  },
+  partnerModeText:{
+    fontFamily: "Montserrat",
+    fontStyle: "normal",
+    fontSize: 24,
+    paddingTop: 96,
+    paddingLeft: 13,
+    paddingRight:13,
+    paddingBottom: 24,
+  },
 });
