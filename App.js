@@ -1,9 +1,8 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
+import GameMode from "./component/GameMode";
 
 export default function App() {
-  const onPress = () => console.log("Casual mode has been clicked");
-
   return (
     <View style={styles.background}>
       <StatusBar style="auto" />
@@ -12,12 +11,17 @@ export default function App() {
         <Text style={styles.realTitle}>THAT Party Game</Text>
       </View>
 
-      <View style={styles.gameMenu}>
-        <TouchableOpacity style={styles.casualModeButton} onPress={onPress}>
-          <Text style={styles.causalModeText}>Casual Mode</Text>
-        </TouchableOpacity>
-      </View>
+      <View style={styles.allGamesWrapper}>
+        <View style={styles.gameMenuTop}>
+          <GameMode text={"Casual"} />
+          <GameMode text={"Fast"} />
+        </View>
 
+        <View style={styles.gameMenuBottom}>
+          <GameMode text={"Spicy"} />
+          <GameMode text={"Partner"} />
+        </View>
+      </View>
     </View>
   );
 }
@@ -28,8 +32,8 @@ const styles = StyleSheet.create({
   },
   titleContainer: {
     paddingTop: 94,
-    paddingLeft: 16,
-    paddingRight: 16,
+    paddingLeft: '4%',
+    paddingRight: '4%',
   },
   topperTitle: {
     fontFamily: "Montserrat",
@@ -41,24 +45,20 @@ const styles = StyleSheet.create({
     fontSize: 32,
     fontStyle: "normal",
   },
-  gameMenu: {
-    marginLeft: 16,
-    marginRight: 16,
-    marginTop:45,
+  allGamesWrapper: {
+    marginLeft: '4%',
+    marginRight:'4%',
+    marginTop: 45,
   },
-  casualModeButton:{
-    width:171,
-    height:171,
-    borderRadius:22,
-    backgroundColor:"#8BB7F2"
+  gameMenuTop: {
+    flex: 1,
+    flexDirection: "row",
+    justifyContent: "space-between",
   },
-  causalModeText:{
-    fontFamily: "Montserrat",
-    fontStyle: "normal",
-    fontSize: 24,
-    paddingTop: 96,
-    paddingLeft: 13,
-    paddingRight:13,
-    paddingBottom: 24,
-  },  
+  gameMenuBottom: {
+    flex: 1,
+    flexDirection: "row",
+    justifyContent: "space-between",
+    marginTop: 16+237,
+  },
 });
