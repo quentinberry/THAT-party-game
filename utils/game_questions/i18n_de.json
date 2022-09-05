@@ -1,0 +1,22 @@
+{
+    "quid1":{
+        "mode": "casual",
+        "question": "drink 2 times if you have tried cocaine before."
+    },
+    "quid2":{
+        "mode": "casual",
+        "question": "drink 1 time if you already lost your virginity"
+    },
+    "quid3":{
+        "mode": "casual",
+        "question": "drink 1 time if you ever went to a festival"
+    },
+    "quid4":{
+        "mode": "casual",
+        "question": "drink 3 times if you did bungee jumping once"
+    },
+    "quid5":{
+        "mode": "casual",
+        "question": "drink 1 time if you stole something"
+    }
+}

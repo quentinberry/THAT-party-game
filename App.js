@@ -1,8 +1,16 @@
 import { StatusBar } from "expo-status-bar";
+import { useState } from "react";
 import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 
 export default function App() {
-  const onPress = () => console.log("Casual mode has been clicked");
+  let [show, setShow] = useState();
+
+  const generateTask = () => {
+    const jsonData= require('./utils/game_questions/i18n_de.json');
+    
+    setShow = jsonData[0].question;
+    console.log(setShow);
+  }
 
   return (
     <View style={styles.background}>
@@ -13,9 +21,13 @@ export default function App() {
       </View>
 
       <View style={styles.gameMenu}>
-        <TouchableOpacity style={styles.casualModeButton} onPress={onPress}>
+        <TouchableOpacity style={styles.casualModeButton} onPress={generateTask}>
           <Text style={styles.causalModeText}>Casual Mode</Text>
         </TouchableOpacity>
+      </View>
+
+      <View>
+        <Text style={styles.test} text={show}/>
       </View>
 
     </View>
@@ -60,5 +72,14 @@ const styles = StyleSheet.create({
     paddingLeft: 13,
     paddingRight:13,
     paddingBottom: 24,
-  },  
+  },
+  test:{
+    fontFamily: "Montserrat",
+    fontStyle: "normal",
+    fontSize: 24,
+    paddingTop: 96,
+    paddingLeft: 13,
+    paddingRight:13,
+    paddingBottom: 24,
+  }  
 });
